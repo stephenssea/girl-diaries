@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image with Scrollable Iframe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Kalam:wght@300;400;700&display=swap');
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Kalam", serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 15px;
+            background-color: #E6E4E5;
+        }
+        .image-container {
+            position: relative;
+            width: 400px;
+            height: 600px;
+        }
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .iframe-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 70%;
+            border: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img class="background-image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/464d94b0-fa66-4e2c-afc5-87b70c39c78a/d4refjj-c401e03e-c896-4283-8666-611d4f33896d.jpg/v1/fit/w_828,h_1024,q_70,strp/kr_100_b_by_krossonovo_d4refjj-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTExMiIsInBhdGgiOiJcL2ZcLzQ2NGQ5NGIwLWZhNjYtNGUyYy1hZmM1LTg3YjcwYzM5Yzc4YVwvZDRyZWZqai1jNDAxZTAzZS1jODk2LTQyODMtODY2Ni02MTFkNGYzMzg5NmQuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.TREiJpXcg0B1Fv8HQguEuR6WexdrlHjebkDvQdzTZjQ" alt="Background Image">
+        <iframe class="iframe-container" src="https://example.com"></iframe>
+    </div>
+</body>
+</html>
